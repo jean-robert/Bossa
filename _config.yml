@@ -1,0 +1,5 @@
+pygments: true
+name: Bossa
+description: Bossa is an automatically-generated blog to discover new songs
+markdown: redcarpet
+url: /Bossa
