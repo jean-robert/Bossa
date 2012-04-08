@@ -1,5 +1,5 @@
 ## data directory
-setwd('/data/R/Nova')
+setwd('/data/R/Bossa')
 require(knitr)
 
 ## blog directory

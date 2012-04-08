@@ -1,5 +1,6 @@
-setwd('/data/R/Nova')
+setwd('/data/R/Bossa')
 require(ggplot2)
+require(multicore)
 
 load('nova.db.Rdata')
 

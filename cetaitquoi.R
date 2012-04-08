@@ -1,7 +1,7 @@
 
 # recupere les chansons sur nova a l'heure donnée, jour donnée
 
-setwd('/data/R/Nova')
+setwd('/data/R/Bossa')
 require(multicore)
 
 named.p <- paste('<div id=\"',
