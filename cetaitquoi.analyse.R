@@ -47,7 +47,4 @@ df <- data.frame(p=factor(names(sort(first.diffs)), levels=names(sort(first.diff
                  fd=as.POSIXlt(sort(first.diffs), origin='1970-01-01'))
 ggplot(df) + geom_point(aes(x=p, y=fd)) + theme_bw()
 
-
-
-
-save.image('nova.analyse.Rdata')
+load('nova.analyse.Rdata')
