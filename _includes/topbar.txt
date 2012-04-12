@@ -6,7 +6,7 @@
           <a class="brand" href="/">Bossa</a>
           <ul class="nav">
            <li><a href="/Bossa/archive.html">Cool songs</a></li>
-	   <li><a href="/Bossa/2012-04-08-Bossa.html">Concept</a></li>
+	   <li><a href="/Bossa/2012/04/08/bossa.html">Concept</a></li>
           </ul>
         </div>
       </div>
