@@ -3,7 +3,7 @@
     <div class="topbar" >
       <div class="topbar-inner">
         <div class="container">
-          <a class="brand" href="/">Bossa</a>
+          <a class="brand" href="/Bossa/">Bossa</a>
           <ul class="nav">
            <li><a href="/Bossa/archive.html">Cool songs</a></li>
 	   <li><a href="/Bossa/2012/04/08/bossa.html">Concept</a></li>
