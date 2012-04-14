@@ -11,4 +11,4 @@ title: Bossa
 {{ first_post.content }}
 
 
-[Read More &raquo;]({{ first_post.url}})
+[Read More &raquo;](/Bossa{{ first_post.url}})
