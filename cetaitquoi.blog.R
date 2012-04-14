@@ -5,15 +5,15 @@ require(knitr)
 ## action plan
 ## 1) load old data
 load(file='nova.db.Rdata')
-old.u.pairs <- sort(table(paste(nova.db$artist, nova.db$titre, sep=' | ')))
+old.u.pairs <- unique(paste(nova.db$artist, nova.db$titre, sep=' | '))
 
 ## 2) update data
 source('cetaitquoi.R')
 
 ## 3) check if anything to publish
-new.u.pairs <- sort(table(paste(nova.db$artist, nova.db$titre, sep=' | ')))
+new.u.pairs <- unique(paste(nova.db$artist, nova.db$titre, sep=' | '))
 
-for(this.pair in names(new.u.pairs)[!(names(new.u.pairs) %in% names(old.u.pairs))]) {
+for(this.pair in new.u.pairs[!(new.u.pairs %in% old.u.pairs)]) {
 
   r <- which(with(nova.db, paste(artiste, titre, sep=' | '))==this.pair)[1]
   
