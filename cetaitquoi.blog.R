@@ -27,7 +27,7 @@ for(this.pair in names(new.u.pairs)[!(names(new.u.pairs) %in% names(old.u.pairs)
                          gsub('[ [:punct:]]', '-', titre), '.md', sep=''))
 
                                         # knit the file
-  knit(input='anewsong.md',
+  knit(input='anewsong_knit_.md',
        output=filename)
                                         # push the post to the website
   tmpf <- tempfile()
