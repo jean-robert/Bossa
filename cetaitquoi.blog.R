@@ -15,7 +15,7 @@ new.u.pairs <- sort(table(paste(nova.db$artist, nova.db$titre, sep=' | ')))
 
 for(this.pair in names(new.u.pairs)[!(names(new.u.pairs) %in% names(old.u.pairs))]) {
 
-  r <- which(with(nova.db, paste(artiste, titre, sep=' | '))==this.pair)
+  r <- which(with(nova.db, paste(artiste, titre, sep=' | '))==this.pair)[1]
   
   ## 4) write post for the new song
   TBU <- nova.db[r, ]
