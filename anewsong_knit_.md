@@ -1,4 +1,4 @@
-<!-- begin.rcode echo=FALSE, results=hide
+<!-- begin.rcode echo=F, results="hide"
 knit_hooks$set(inline = function(x) x)
 load('TBU.Rdata')
 end.rcode -->
@@ -8,7 +8,7 @@ title: <!--rinline paste(TBU$artiste, TBU$titre, sep=' | ') -->
 ---
 
 
-<!-- begin.rcode datascraping eval=TRUE, echo=FALSE, results=asis
+<!-- begin.rcode echo=F, results="asis"
     YTSearch <- tryCatch(paste(readLines(paste("http://www.youtube.com/results?search_type=videos&search_query=",
     	     gsub('[ [:punct:]]', '+', TBU$artiste), '+', gsub('[ [:punct:]]', '+', TBU$titre), sep='')), collapse="/n"),
 	     error=function(e) { "riendutout" })
