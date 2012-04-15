@@ -10,7 +10,7 @@ layout: rss-feed
 		{% for post in site.posts limit:20 %}
 			<item>
 				<title>{{ post.title }}</title>
-				<description>{{ post.title }}</description>
+				<description>{{ post.content }}</description>
 				<published>{{ post.date }}</published>
 				<link>{{ site.url }}{{ post.url }}</link>
 			</item>
