@@ -8,7 +8,7 @@ load(file='nova.db.Rdata')
 old.u.pairs <- unique(paste(nova.db$artist, nova.db$titre, sep=' | '))
 
 ## 2) update data
-source('cetaitquoi.R')
+source('cetaitquoi.after.R')
 
 ## 3) check if anything to publish
 new.u.pairs <- unique(paste(nova.db$artist, nova.db$titre, sep=' | '))
@@ -22,7 +22,7 @@ for(this.pair in new.u.pairs[!(new.u.pairs %in% old.u.pairs)]) {
   save(TBU, file='TBU.Rdata')
   
   filename <- with(nova.db[r,],
-                   paste(Sys.Date(), '-',
+                   paste(format(as.POSIXlt(as.numeric(time), origin='1970-01-01'), '%Y-%m-%d-%H-%M'), '-',
                          gsub('[ [:punct:]]', '-', artiste), '-',
                          gsub('[ [:punct:]]', '-', titre), '.md', sep=''))
 
