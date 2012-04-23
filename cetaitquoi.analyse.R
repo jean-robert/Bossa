@@ -17,8 +17,8 @@ png(file='top10artistes.png'); print(p); dev.off()
 # retrieve unique artists/songs pairs
 u.pairs <- sort(table(paste(nova.db$artist, nova.db$titre, sep=' | ')))
 
-df <- data.frame(Chanson=factor(names(tail(u.pairs, 100)), levels=names(tail(u.pairs, 100))),
-                 Occurrences=tail(u.pairs, 100))
+df <- data.frame(Chanson=factor(names(tail(u.pairs, 10)), levels=names(tail(u.pairs, 10))),
+                 Occurrences=tail(u.pairs, 10))
 p <- ggplot(df) + geom_bar(aes(x=Chanson, y=Occurrences)) + scale_x_discrete(labels=NULL) + theme_bw() + coord_flip() + geom_text(aes(x=Chanson, y=5, label=Chanson), col='white', size=4, hjust=0)
 png(file='top10chansons.png'); print(p); dev.off()
 
@@ -47,4 +47,4 @@ df <- data.frame(p=factor(names(sort(first.diffs)), levels=names(sort(first.diff
                  fd=as.POSIXlt(sort(first.diffs), origin='1970-01-01'))
 ggplot(df) + geom_point(aes(x=p, y=fd)) + theme_bw()
 
-load('nova.analyse.Rdata')
+save.image(file='nova.analyse.Rdata')
