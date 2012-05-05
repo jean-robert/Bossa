@@ -1,5 +1,5 @@
 ## settings
-setwd('/data/R/Bossa')
+setwd('~/Rwork/Bossa')
 require(knitr)
 
 ## action plan
@@ -37,7 +37,7 @@ for(this.pair in new.u.pairs[!(new.u.pairs %in% old.u.pairs)]) {
   system(paste('git add', paste('_posts/',filename,sep='')))
   system(paste("git commit -m 'adding a new song: ", gsub('[ [:punct:]]', ' ', nova.db[r, 'artiste']), '-',
                gsub('[ [:punct:]]', ' ', nova.db[r,'titre']), "'", sep=''))
-  system('git checkout master')
+  system('git checkout prod')
 
 }
 

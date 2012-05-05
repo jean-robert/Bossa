@@ -1,7 +1,7 @@
 
 # recupere les chansons sur nova après une certaine heure
 
-setwd('/data/R/Bossa')
+setwd('~/Rwork/Bossa')
 require(multicore)
 
 named.p <- paste('<div id=\"',
