@@ -48,3 +48,8 @@ df <- data.frame(p=factor(names(sort(first.diffs)), levels=names(sort(first.diff
 ggplot(df) + geom_point(aes(x=p, y=fd)) + theme_bw()
 
 save.image(file='nova.analyse.Rdata')
+
+# diff per day
+diffperday <- table(as.Date(as.POSIXlt(as.numeric(nova.db$time), origin='1970-01-01')))
+ggplot(data.frame(d=as.Date(names(diffperday)), y=as.numeric(diffperday))) + geom_point(aes(x=d, y=y)) +scale_y_continuous('') + scale_x_date(name='') + theme_bw()
+
